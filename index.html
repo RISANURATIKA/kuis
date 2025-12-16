@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App Question & Score</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen active">
+      <h1>Selamat Datang di Kuis!</h1>
+      <p>Jawab pertanyaan.</p>
+      <button id="start-btn" class="btn primary">Mulai Kuis</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="screen hidden">
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+      <div class="question-card">
+        <h2 id="question-text">Loading...</h2>
+        <div id="answer-buttons" class="btn-grid">
+          <!-- Buttons injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="screen hidden">
+      <h2>Hasil Kuis</h2>
+      <div class="score-card">
+        <p>Skor Anda:</p>
+        <h1 id="total-score">0</h1>
+        <p id="score-description" class="fade-in"></p>
+      </div>
+      <button id="save-btn" class="btn primary">Simpan Hasil</button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
