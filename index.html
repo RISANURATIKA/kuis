@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Pintar Berskor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container" id="quiz-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>Selamat Datang di kuis Generalized Anxiety Disorders-7 (GAD-7)</h1>
+            <p>Silakan isi data diri Anda sebelum memulai:</p>
+            <div class="input-group">
+                <input type="text" id="user-name" placeholder="Nama Lengkap" required>
+                <input type="tel" id="user-phone" placeholder="Nomor Telepon" required>
+                <input type="number" id="user-age" placeholder="Usia" required>
+            </div>
+            <button id="start-btn" class="btn primary">Mulai Kuis</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="question-container">
+                <h2 id="question-text">Pertanyaan akan muncul di sini</h2>
+            </div>
+            <div id="answer-buttons" class="btn-grid">
+                <!-- Buttons will be generated here -->
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h2>Hasil Kuis Kamu</h2>
+            <div class="score-display">
+                <span id="score">0</span>
+                <span class="total-label">Total Skor</span>
+            </div>
+            <p id="result-message">Pesan hasil...</p>
+            <button id="save-pdf-btn" class="btn secondary">Simpan PDF</button>
+        </div>
+    </div>
+
+    <!-- Hidden Container for PDF Generation -->
+    <div id="pdf-content" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
